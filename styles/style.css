@@ -1,0 +1,35 @@
+*,
+::before, 
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 100px;
+}
+
+header, main, footer {
+    grid-column: 1 / -1;
+}
+
+header, footer {
+    background-color: blue;
+}
+
+.container {
+    background-color: lime;
+}
+
+.container img {
+    width: 100%;
+}
+
+@media screen and (max-width: 720px) {
+    .container img {
+        width: 100%;
+    }
+}
